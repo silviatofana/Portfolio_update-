@@ -2,7 +2,8 @@
 
 # Portfolio
 > This is my Portfolio project
-> 
+> !![Untitled](https://user-images.githubusercontent.com/100236377/205439471-ed821511-b52c-4c39-ae9d-16b7f4c2ee67.png)
+
 
 
 ## Built With
@@ -39,7 +40,7 @@ cd portfolio
 
 - GitHub: [@silviatofana](https://github.com/silviatofana)
 - Twitter: [@silviatofana](https://twitter.com/silviatofana)
-- LinkedIn: [@silviatofana](https://www.linkedin.com/in/silviatofana/)
+- LinkedIn: [@Mandela Tumukunde](https://www.linkedin.com/in/silviatofana/)
 
 ## 🤝 Contributing
 

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <!--modal for destop and mobile-->
+    <aside class="modal-container hidden">
+    </aside>
+    <aside class="modal-mobile hidden">
+    </aside>
+    <header class="mobile-container">
+      <!-- <img src="images/Light.svg" alt="light svg"> -->
+      <nav>
+        <div class="mobile-nav">
+          <h1 id="logo">
+            <a href="#"> Welcome </a>
+          </h1>
+          <nav class="navigation">
+            <a id="bar" href="#">
+              <i class="far fa-bars"></i>
+            </a>
+          </nav>
+        </div>
+        <div class="desktop-nav">
+          <ul class="nav-list">
+            <li class="close-menu">
+              <a href="#">
+                <i class="far times"></i>
+              </a>
+            </li>
+            <li class="top-nav">
+              <a class="nav-link" href="#welcome-section"> Portoflio</a>
+            </li>
+            <li class="top-nav">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="top-nav">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="deskview">
+            <ul>
+              <li>
+                <a href="#">
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#"> Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="info">
+      <h1 class="intro-text">Hey there. I'm Silvia Tofana.<br>
+        <span class="text-anime"> I'm a software developer </span>
+      </h1>
+      <p class="support-text">
+        I can help you build a product , feature or website Look through some of my work and
+        experience! If you like
+        what you see and have a project you need coded,
+        don't hesitate to contact me.
+      </p>
+      <div class="mediatags">
+        <ul class="socialmedia">
+          <li>
+            <a target="_blank" href="https://twitter.com/silviatofana" rel="noopener noreferrer">
+              <img src="Images/twitter.svg" alt=" twitter handle">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.linkedin.com/in/silviatofana/"
+              rel="noopener noreferrer">
+
+              <img src="Images/Linkedinicon.svg" alt=" linked handle">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#" rel="noopener noreferrer">
+              <img src="Images/medium.png" alt=" medium handle">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://github.com/silviatofana" rel="noopener noreferrer">
+              <img src="Images/github.svg" alt=" github handle">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/angellist.png" alt=" angellist logo">
+            </a>
+          </li>
+        </ul>
+        <div class="middle">
+          <button type="button" name="scroll-down" aria-label="Scroll down" class="arrow-btn">
+            <i class="fa fa-angle-down"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <section class="work_section" id="welcome-section">
+      <h2>My Recent <br> Works</h2>
+      <hr class="new1">
+      <div class="articlewraper">
+      </div>
+    </section>
+    <section class="about_section" id="about">
+      <div class="more-section">
+        <h3>About me</h3>
+        <p class="content">
+          I can help you build a product ,<br> feature or website Look through <br> some of my work and experience!
+          If you like what you see and have a <br> project you need coded, <br>
+          don't hesitate to contact me.
+        </p>
+        <a class="resume-btn">Get My Resume</a>
+      </div>
+    </section>
+    <section class="main-card">
+      <ul class="about-cards">
+        <li class="about-card">
+          <img class="icon_language_icon1" src="Images/icon-languages.svg" alt="languages icon" />
+          <h2 class="language">Languages</h2>
+          <ul class="languages-list">
+            <li class="programing-lang">Javascript</li>
+            <li class="programing-lang">Ruby</li>
+            <li class="programing-lang">Html</li>
+            <li class="programing-lang">Css</li>
+          </ul>
+        </li>
+        <li class="about-card">
+          <img class="icon_language " src="Images/icon-frameworks.svg" alt=" languages icon" />
+          <h2 class="language">Frameworks</h2>
+          <ul class="languages-list">
+            <li class="programing-lang">Bootstrap</li>
+            <li class="programing-lang">Ruby on rails</li>
+            <li class="programing-lang">Rspec</li>
+            <li class="programing-lang">Capybara</li>
+            <li class="programing-lang">Selenium</li>
+          </ul>
+        </li>
+        <li class="about-card">
+          <img class="icon_language " src="Images/icon-skills.svg" alt="language icon" />
+          <h2 class="language">Skills</h2>
+          <ul class="languages-list">
+            <li class="programing-lang">CodeKit</li>
+            <li class="programing-lang">Github</li>
+            <li class="programing-lang">Codepen</li>
+            <li class="programing-lang">Gitlab</li>
+            <li class="programing-lang">Terminal</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="contact-form" id="contact">
+      <h4 class="primary-text">
+        I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
+      </h4>
+      <div class="form-field">
+        <form name="contactForm" class="form-detail" action="https://formspree.io/f/xrgjlvve" method="POST">
+          <input type="text" name="fullname" id="fullName" maxlength="30" class="input-name" placeholder="Full name"
+            required />
+          <input type="email" name="email" id="email" class="input-email" placeholder="Email address" required />
+          <textarea name="message" id="message" cols="30" rows="10" maxlength="500" placeholder="Enter text here"
+            required></textarea>
+              <span class="error-message">Email must be in lower case</span>
+          <button type="submit" class="contact-btn">Get in touch</button>
+         
+        </form>
+      </div>
+    </section>
+    <hr class="new2">
+    <footer class="tags-link">
+      <div class="link-tags">
+        <ul class="media">
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/twitter.svg" alt=" twitter handles">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/Linkedinicon.svg" alt=" linked handles">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/medium.png" alt=" medium handles">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/github.svg" alt=" github handles">
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="#">
+              <img src="Images/angellist.png" alt=" angellist handles">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="mail">
+        <a class="email-me" href="mailto:manderatuks@gmail.com">manderatuks@gmail.com</a>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+
+</html>

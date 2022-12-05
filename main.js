@@ -1,299 +1,218 @@
-const humberg = document.querySelector('.navigation');
-const navList = document.querySelector('.nav-list');
-const times = document.querySelector('.times');
-const navLink = document.querySelectorAll('.nav-link');
-const modalDesktop = document.querySelector('.modal-container');
-const modalMobile = document.querySelector('.modal-mobile');
+let isClicked = false;
+const form = document.getElementById('form');
+const error = document.getElementById('error');
 
-function closeNavItems() {
-  navList.classList.replace('open', 'nav-list');
-  navList.style.display = '';
+function openNav() {
+  if (!isClicked) {
+    document.getElementById('Mynav').style.display = 'block';
+    document.getElementById('head').style.filter = 'blur(0.9rem)';
+    document.getElementById('logo').style.filter = 'blur(0.9rem)';
+    document.getElementById('hamb').style.display = 'none';
+    isClicked = true;
+  } else {
+    document.getElementById('Mynav').style.display = 'none';
+    document.getElementById('head').style.filter = 'none';
+    document.getElementById('hamb').style.display = 'block';
+    document.getElementById('logo').style.filter = 'none';
+    isClicked = false;
+  }
 }
-humberg.addEventListener('click', () => {
-  navList.classList.replace('nav-list', 'open');
-  times.classList.add('fa-times');
-  navList.style.display = 'block';
-});
 
-times.addEventListener('click', () => {
-  closeNavItems();
-});
-
-navLink.forEach((link) => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth > 768) {
-      closeNavItems();
-    }
-  });
-});
-
-// projectbutton.addEventListener
+// eslint-disable-next-line no-unused-vars
+function menuClicked() {
+  openNav();
+}
 
 const projects = [
   {
-    name: 'To Do List',
-    mainImage: 'Images/todolistsmall.png',
-    mobileImage: '',
-    technologies: ['css', 'JavaScript', 'html'],
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    popupTechnologies: ['Github', 'JavaScript', 'Terminal'],
-    description: 'This is the do list which can help an individual in their daily life so with this an individual can delete and add a task',
-    liveVersion: 'https://mandelatuks.github.io/To-do-list-webApps/',
-    sourceLink: 'https://github.com/mandelatuks/To-do-list-webApps',
-  },
+    id: 0,
+    place: 'Microverse',
+    title: 'Full Stack Project',
+    year: '2022',
+    name: 'Doctor Appointments',
+    description:
+      "With this web application you can book and reserve a doctor's appointment",
+    technologies: ['html', 'css', 'react', 'redux', 'ruby on rails', 'jest', 'github', 'Boostrap'],
+    image: {
+      link: 'logos/screenshot.png',
+      alt: 'doctor app',
+    },
 
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    mainImage: 'Images/ImgPlaholder.png',
-    mobileImage: '',
-    technologies: ['Ruby on rails', 'css', 'Javasript', 'html'],
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    popupTechnologies: ['CodeKit', 'Github', 'Javasript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    liveVersion: 'https://github.com/mandelatuks/Portfolio',
-    sourceLink: 'https://github.com/mandelatuks/Portfolio',
-  },
-
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    mainImage: 'Images/ImgPlaholder.png',
-    mobileImage: '',
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    technologies: ['Ruby on rails', 'css', 'Javasript', 'html'],
-    popupTechnologies: ['CodeKit', 'Github', 'Javasript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    liveVersion: '#',
-    sourceLink: 'https://github.com/silviatofana/Portfolio_update-',
-  },
-
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    mainImage: 'Images/ImgPlaholder.png',
-    mobileImage: '',
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    technologies: ['Ruby on rails', 'css', 'Javasript', 'html'],
-    popupTechnologies: ['CodeKit', 'Github', 'Javasript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    liveVersion: 'https://github.com/silviatofana/Portfolio_update-',
-    sourceLink: 'https://github.com/silviatofana/Portfolio_update-',
-  },
-
-  {
-    name: 'Multi-Post Stories Gain+Glory',
-    mainImage: 'Images/ImgPlaholder.png',
-    mobileImage: '',
-    technologies: ['Ruby on rails', 'css', 'Javasript', 'html'],
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    popupTechnologies: ['CodeKit', 'Github', 'Javasript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    liveVersion: 'https://github.com/silviatofana/Portfolio_update-',
-    sourceLink: 'https://github.com/silviatofana/Portfolio_update-',
+    liveSource: 'https://doctora-app.netlify.app/',
+    sourceCode: 'https://github.com/silviatofana/Doctor-appointment',
   },
   {
-    name: 'Multi-Post Stories Gain+Glory',
-    desktopName: 'Keeping track of hundreds of components ',
-    mainImage: 'Images/ImgPlaholder.png',
-    mobileImage: '',
-    technologies: ['Ruby on rails', 'css', 'Javasript', 'html'],
-    mobileTechnologies: ['Ruby on rails', 'css', 'Javasript'],
-    popupTechnologies: ['CodeKit', 'Github', 'Javasript', 'Bootstrap', 'Terminal', 'Codepen'],
-    description: ' Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry is standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-    liveVersion: 'https://github.com/silviatofana/Portfolio_update-',
-    sourceLink: 'https://github.com/silviatofana/Portfolio_update-',
+    id: 1,
+    name: 'Book-react',
+    place: 'Microverse',
+    title: 'Frontend Dev Project',
+    year: '2022',
+    description:
+      'This project will lay foundations for your Bookstore website. You will create the React part of the app. You will also set up routing using React',
+    technologies: ['css', 'javascript', 'html', 'react'],
+    image: {
+      link: 'logos/screenshot2.png',
+      alt: 'book-react',
+    },
+    liveSource: 'https://app-tests--voluble-alfajores-60db6f.netlify.app/',
+    sourceCode: 'https://github.com/silviatofana/book-react-',
+  },
+  {
+    id: 2,
+    name: 'My Conference',
+    place: 'Microverse',
+    title: 'Frontend Dev Project',
+    year: '2022',
+    description:
+      'This a professional website based on Behance design . It is a project that uses Javascript objects to dynamically render DOM elements',
+    technologies: ['css', 'javascript', 'html'],
+    image: {
+      link: 'logos/conf.png',
+      alt: 'My conference',
+    },
+    liveSource: 'https://silviatofana.github.io/Conference-Capstone/',
+    sourceCode: 'https://github.com/silviatofana/Conference-Capstone',
+  },
+  {
+    id: 3,
+    name: 'Awesome Books',
+    place: 'Micoverse',
+    title: 'Frontend Dev Project',
+    year: '2022',
+    description:
+      'A SPW (Single Page Website) that can track your favorite books on your browser! Made with ES6 modules,JavaScript, HTML 5 and CSS 3',
+    technologies: ['es6', 'css', 'java script', 'html'],
+    image: {
+      link: 'logos/awesome-books-desktop-version.png',
+      alt: 'Book a Dev',
+    },
+    liveSource: 'https://silviatofana.github.io/awesome-books-es6-modules/',
+    sourceCode: 'https://github.com/silviatofana/awesome-books-es6-modules',
   },
 ];
-const enableClosePopup = () => {
-  const closeIcon = document.querySelector('.close-icon1');
-  closeIcon.addEventListener('click', (e) => {
-    e.preventDefault();
-    if (!modalDesktop.classList.contains('hidden')) {
-      modalDesktop.classList.add('hidden');
-    }
-    if (!modalMobile.classList.contains('hidden')) {
-      modalMobile.classList.add('hidden');
-    }
-  });
-};
-const enablePopUps = () => {
-  const seeProjectBtns = document.querySelectorAll('.btn-card');
-  seeProjectBtns.forEach((seeProjectBtn) => {
-    seeProjectBtn.addEventListener('click', () => {
-      const id = seeProjectBtn.getAttribute('id');
-      const projectData = projects[id];
-      if (window.innerWidth >= 768) {
-        // show desktop popup
-        let technologies = '';
-        projectData.popupTechnologies.map((lang) => {
-          technologies += `<li class="lang-rr">${lang}</li>`;
-          return null;
-        });
-        const popUpData = `
-          <div class="modal">
-            <a class="close-icon1"><img src="Images/Disabled.svg" alt="disabled button" /></a>
-            <img class="modal-image" src="Images/todolistsmall.png" alt="project image" />
-              <div class="title-button">
-                <h2 class="modal-title2">${projectData.name}</h2>
-                <div class="linkBtnContainer">
-                  <a class="see-demo3" href="${projectData.liveVersion}">See live <img src="Images/see-live.png" alt=" icon for live" /></a>
-                  <a class="see-demo4" href="${projectData.sourceLink}">See Source <img src="Images/see-source.png" alt="icon for github" /></a>
-                </div>
-              </div>
-                <ul class="technology-list">${technologies}</ul>
-              <p class="description2">${projectData.description}</p>
-        </div>
-      `;
 
-        if (modalDesktop.classList.contains('hidden')) {
-          modalDesktop.classList.remove('hidden');
-          modalDesktop.innerHTML = popUpData;
-        }
-        enableClosePopup();
-      } else {
-        // show mobile popup
-        let mobileTechnologies = '';
-        projectData.mobileTechnologies.map((lang) => {
-          mobileTechnologies += `<li class="lang-rr">${lang}</li>`;
-          return null;
-        });
-        const popUpData = `
-          <div class="moblie-model">
-            
-            <div class="closeimage">
-              <a  class="close-icon1">
-                <img src="Images/Icon-Cancel.svg" alt="disabled button">
-              </a>
-            </div>
-            <img class = "mainimage" src="Images/Snapshootmobile.svg" alt="project image">
-              
-                    <h2 class="modal-title">
-                    Keeping track of hundreds of <br>
-                      components  
-                    
-                    </h2>
-                    <div class="technologies">
-                      <ul class="technology-list">
-                      ${mobileTechnologies}             
-                    </ul>
-                    </div>
-            
-              <p class="description">
-                ${projectData.description}
+const modalDetails = document.createElement('div');
+modalDetails.id = 'modal-details';
+modalDetails.className = 'project-details';
+
+function showDetails(projectIndex) {
+  const projectsCode = `
+  <div class="details-container">
+    <div class="details-container-content">
+    <div class="headc">
+    <h1 class= "headtitle">${projects[projectIndex].name}</h1>
+    <div class="works__card__subtitle flex">
+              <p class="works__card__subtitle-1 c1">
+              <b>${projects[projectIndex].place}</b>
               </p>
-              <div class="action-button">
-              <a class="see-demo1">See live
-                <img class="seelive" src="Images/see-live.png" alt=" icon for live">
-            </a>
-            <a class="see-demo2">See Source
-                <img src="Images/see-source.png" alt="icon for github">
-            </a>
+              <ul class="works__card__subtitle-ul flex">
+                <li class="works__card__subtitle-li c2">
+                ${projects[projectIndex].title}
+                </li>
+                <li class="works__card__subtitle-li c2"> 
+                ${projects[projectIndex].year}
+                </li>
+              </ul>
             </div>
+    <div class="closeDetails" id="closeDetails">&times;</div>
+    </div>
+      <img class="project-image" src="${projects[projectIndex].image.link}" alt="${projects[projectIndex].image.alt}" />
+       <div class="s1"> 
+      <p class="description">
+        ${projects[projectIndex].description}
+       </p>
+
+        <div class="tech-and-buttons">
+          <div class="card-languages">
+            ${(function usedTech() {
+    return projects[projectIndex].technologies
+      .map((tech) => `<li class="language">${tech}</li>`)
+      .join('');
+  }())}
           </div>
-        `;
-        if (modalMobile.classList.contains('hidden')) {
-          modalMobile.classList.remove('hidden');
-          modalMobile.innerHTML = popUpData;
-        }
-        enableClosePopup();
-      }
-    });
+          <div class="buttons">
+            <a href="${
+  projects[projectIndex].liveSource
+}" class="btn green-button">
+<div class ="it">See Live</div>
+<div class="image"><img src="logos/Icon.png"></div>
+ </a>
+
+             <a href="${
+  projects[projectIndex].sourceCode
+}" class="btn green-button"><div class ="it">See source</div>
+<div class="image"><img src="logos/Vector.png"></div>
+ </a>
+          </div>
+          </div>
+    </div>
+  </div>`;
+
+  modalDetails.innerHTML += projectsCode;
+  document.body.appendChild(modalDetails);
+  document.getElementById('closeDetails').addEventListener('click', () => {
+    modalDetails.innerHTML = '';
+    document.body.removeChild(modalDetails);
+    document.getElementById('hero').style.filter = 'none';
   });
-};
-
-const workSection = document.querySelector('.articlewraper');
-projects.forEach((item, index) => {
-  let technologies = '';
-  item.technologies.map((lang) => {
-    technologies += `<li class="lang-rr">${lang}</li>`;
-    return null;
-  });
-  const project = `
-    <article class="card-one">
-      <img src="${item.mainImage}" alt="image holder" class="imgholder">
-
-      <div class="description1">
-        <h3>
-          ${item.name}
-        </h3>
-        <ul class="project-languages">
-          ${technologies}
-        </ul>
-        <button type="button" class="btn-card" id="${index}"> See Project</button>
-      </div>
-    </article>
-  `;
-  workSection.innerHTML += project;
-});
-
-enablePopUps();
-
-// validate contact form
-const form = document.querySelector('.form-detail');
-
-function isValidated(input) {
-  if (input === input.toLowerCase()) return true;
-  return false;
 }
+
+const portfolioDynamic = document.getElementById('portfolio-section');
+const projectList = document.createElement('ul');
+projectList.className = 'works__cards ul grid';
+portfolioDynamic.appendChild(projectList);
+
+let projectsCard = '';
+for (let j = 0; j < projects.length; j += 1) {
+  projectsCard += `
+  <li class="works__card flex bg-white">
+            <div class="works__card__img">
+              <img src="${projects[j].image.link}" alt="tonic project" />
+            </div>
+            <div class="works__card__text">
+              <h2 class="works__card__title">${projects[j].name}</h2>
+              <div class="works__card__subtitle flex">
+                <p class="works__card__subtitle-1">${projects[j].place}</p>
+                <ul class="works__card__subtitle-ul flex">
+                  <li class="works__card__subtitle-li">${projects[j].title}</li>
+                  <li class="works__card__subtitle-li">${projects[j].year}</li>
+                </ul>
+              </div>
+              <p class="works__card__dsc p1">
+              ${projects[j].description}
+              </p>
+              <div class="works__card__topics flex">
+                <p class="works__card__topics__text p2 w1">html</p>
+                <p class="works__card__topics__text p2 w1">css</p>
+                <p class="works__card__topics__text p2 w1">javascript</p>
+              </div>
+              <div class="works__card__btn">
+                <button type="button" class="btn b1 details-btn " type="button" data-id="${
+  projects[j].id
+}">See Project</button>
+              </div>
+            </div>
+          </li>`;
+}
+projectList.innerHTML = projectsCard;
+
+const showButton = document.querySelectorAll('.details-btn');
+showButton.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    showDetails(event.target.dataset.id);
+    document.getElementById('hero').style.filter = 'blur(1.9rem)';
+  });
+});
 
 form.addEventListener('submit', (event) => {
-  const email = document.getElementById('email');
-  if (!isValidated(email.value)) {
+  let check = false;
+  const emailInput = document.getElementById('user_email');
+  if (emailInput.value.toLowerCase() === emailInput.value) {
+    check = true;
+  }
+  if (check === false) {
     event.preventDefault();
-    const error = document.querySelector('.error-message');
-    error.style.display = 'block';
+    error.innerText = 'Please Your Email Must be in Lower Case';
+    error.style.color = 'red';
   }
 });
-
-function storageAvailable(type) {
-  let storage;
-  try {
-    storage = window[type];
-    const x = '__storage_test__';
-    storage.setItem(x, x);
-    storage.removeItem(x);
-    return true;
-  } catch (e) {
-    return e instanceof DOMException && (
-      e.code === 22
-      || e.code === 1014
-      || e.name === 'QuotaExceededError'
-      || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
-      && (storage && storage.length !== 0);
-  }
-}
-// // Getting values from storage
-function setInputsData() {
-  const inputsDataObj = JSON.parse(localStorage.getItem('inputsData'));
-  document.getElementById('fullName').value = inputsDataObj.name;
-  document.getElementById('email').value = inputsDataObj.email;
-  document.getElementById('message').value = inputsDataObj.message;
-}
-
-// Setting values in storage
-function populateStorage() {
-  const inputsDataObj = {};
-
-  inputsDataObj.name = document.getElementById('fullName').value;
-  inputsDataObj.email = document.getElementById('email').value;
-  inputsDataObj.message = document.getElementById('message').value;
-  localStorage.setItem('inputsData', JSON.stringify(inputsDataObj));
-  setInputsData();
-}
-
-if (storageAvailable('localStorage')) {
-  // Yippee! We can use localStorage awesomeness
-  // Testing whether your storage has been populated
-  if (!localStorage.getItem('inputsData')) {
-    populateStorage();
-  } else {
-    setInputsData();
-  }
-}
-
-// Update storage whenever a form value is changed
-const fullNames = document.getElementById('fullName');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
-
-fullNames.addEventListener('input', populateStorage);
-email.addEventListener('input', populateStorage);
-message.addEventListener('input', populateStorage);

@@ -14,7 +14,7 @@
 
 ## Live Demo 
 
-[Live Demo Link](https://silviatofana.github.io/portfolio/)
+[Live Demo Link](https://silviatofana.github.io/portfolio_update-/)
 
 
 ## Getting Started

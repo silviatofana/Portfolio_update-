@@ -34,7 +34,7 @@ const projects = [
       "With this web application you can book and reserve a doctor's appointment",
     technologies: ['html', 'css', 'react', 'redux', 'ruby on rails', 'jest', 'github', 'Boostrap'],
     image: {
-      link: 'logos/screenshot3.png',
+      link: 'logo/screenshot1.png',
       alt: 'doctor app',
     },
 
